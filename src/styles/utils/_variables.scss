@@ -1,36 +1,24 @@
 /* fonts */
-$font_thin: 'ProximaNova-Thin';
-$font_light: 'ProximaNova-Light';
-$font_main: 'ProximaNova-Regular';
-$font_semibold: 'ProximaNova-Semibold';
-$font_bold: 'ProximaNova-Bold';
+$font_light: 'OpenSans-Light';
+$font_main: 'OpenSans-Regular';
+$font_bold: 'OpenSans-Bold';
 
 /* font sizes*/
 $size_smaller_font: 10px;
 $size_small_font: 12px;
 $size_main_font: 14px;
-$size_link_font: 16px;
+$size_link_font: 24px;
 $size_title_font: 20px;
 $size_title_description_font: 30px;
 $size_title_big_font: 36px;
 
 /* color */
-$color_selected: #67B930;
-$color_underline: #23AAEA;
-$color_main: #F2F6FA;
-$color_darkblue: #2A58AD;
-
-$color_dark: #1D4C9E;
-$color_description: #6F7B8E;
-
-$color_main_bg: #E7EBEE;
-$color_main_bg_light: #F5F9FB;
-$color_link: #0C2947;
-$color_white: #ffffff;
-$color_blue: #EAF5FE;
-$color_border: #C8D0D9;
-$color_price_gradient: linear-gradient(to right, rgba(35, 170, 234, 1) 0%, rgba(63, 113, 209, 1) 100%);
-$color_alert: #FF8F00;
-
-$color_count: #3D66B4;
-$color_error: #E64A19;
+$color_grey: #F4F6F2;
+$color_txt: #263238;
+$color_txt2: #78909C;
+$color_green: #38AC60;
+$color_bord: #425B67;
+$color_footer: #293B44;
+$color_error: #EB5757;
+$color_btn: #FFA000;
+$color_white: #fff;
