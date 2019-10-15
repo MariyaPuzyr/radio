@@ -1,3 +1,46 @@
 .banner {
-
+  font-family: $font_main;
+  position: relative;
+  &-items {
+    position: relative;
+  }
+  &-title {
+    font-size: 38px;
+    line-height: 54px;
+    color: $color_white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  &-avatar {
+    background: #C4C4C4;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+    z-index: 2;
+    &-header {
+      position: absolute;
+      top: 0;
+      right: 0;
+      min-width: 58.33333%;
+    }
+  }
+  .first-position {
+    right: 8.33333%;
+    width: 380px;
+    height: 380px;
+    top: 0;
+  }
+  .second-position {
+    width: 285px;
+    height: 285px;
+    top: 205px;
+    right: 376px;
+  }
+  .third-position {
+    width: 250px;
+    height: 250px;
+    right: 30px;
+    top: 370px;
+  }
 }
