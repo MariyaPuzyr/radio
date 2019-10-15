@@ -3,6 +3,7 @@
   position: relative;
   &-items {
     position: relative;
+    z-index: 1;
   }
   &-title {
     font-size: 38px;
@@ -23,6 +24,7 @@
       top: 0;
       right: 0;
       min-width: 58.33333%;
+      z-index: -1;
     }
   }
   .first-position {

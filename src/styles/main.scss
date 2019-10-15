@@ -30,3 +30,11 @@ h1, h2, h3, h4, h5, h6 {
 body {
   background: $color_white;
 }
+
+@media (min-width: 768px) and (max-width: 991px){
+  .container {
+    max-width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}

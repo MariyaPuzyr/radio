@@ -7376,6 +7376,7 @@ a.text-dark:focus {
   -o-transition: .3s;
   transition: .3s;
   margin-bottom: 35px;
+  text-align: center;
 }
 
 .get-advertising:hover {
@@ -7569,6 +7570,7 @@ a.text-dark:focus {
 
 .banner-items {
   position: relative;
+  z-index: 1;
 }
 
 .banner-title {
@@ -7595,6 +7597,7 @@ a.text-dark:focus {
   top: 0;
   right: 0;
   min-width: 58.33333%;
+  z-index: -1;
 }
 
 .banner .first-position {
@@ -12332,6 +12335,14 @@ body {
 @media (max-width: 568px) {
   .header-item .info {
     margin-top: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
