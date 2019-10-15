@@ -1,4 +1,4 @@
-.header{
+.header {
   &-item {
     padding-top: 50px;
     padding-bottom: 25px;
@@ -8,13 +8,24 @@
       line-height: 36px;
       font-family: $font_main;
       text-align: right;
+      @include adapt_to('phone') {
+        margin-top: 10px;
+      }
+      @include adapt_to('large-phone') {
+        font-size: 18px;
+      }
     }
-    .mail-ino {
+    .mail-info {
       color: $color_white;
+      transition: .3s;
+      &:hover {
+        color: $color_btn;
+        text-decoration: none;
+      }
     }
   }
   &-logo {
-    width: 286px;
+    max-width: 286px;
     height: 65px;
   }
 }
