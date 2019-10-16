@@ -54,6 +54,11 @@ const paths = {
     dist: "./dist/img/sprites/",
     watch: "./src/img/svg/*.svg"
   },
+  audio: {
+    src: "./src/audio/**",
+    dist: "./dist/audio/",
+    watch: "./src/audio/"
+  },
   frontend: {
     img: "../public/img",
     js: "../public/js",
@@ -189,7 +194,13 @@ gulp.task('fonts', function () {
         "title": "Copy fonts:"
       }));
 });
-
+gulp.task('audio', function () {
+  return gulp.src([paths.audio.src])
+      .pipe(gulp.dest(paths.audio.dist))
+      .pipe(debug({
+        "title": "copy audio files:"
+      }));
+});
 /* COPY FILES TASK */
 gulp.task('copy-styles', function () {
   return gulp.src('./dist/styles/**')
@@ -219,6 +230,7 @@ gulp.task('watch',
           'scripts',
           'images',
           'fonts',
+          'audio',
           'sprites',
           'main-libs'
         ],
