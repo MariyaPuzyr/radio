@@ -59,11 +59,32 @@
       line-height: 22px;
       color: $color_txt2;
       font-family: $font_main;
-      padding: 10px 30px;
+      padding: 12px 30px;
+      height: auto;
       border: 2px solid $color_bord;
       border-radius: 25px;
       background: $color_txt;
+      margin-bottom: 20px;
       transition: .3s;
+      resize: none;
+      &:focus {
+        background: $color_white;
+        border-color: $color_green;
+        color: $color_txt;
+        &::placeholder {
+          color: $color_txt;
+        }
+      }
+    }
+    textarea.form-control {
+      height: 190px;
+    }
+    .error {
+      border-color: $color_error;
+      color: $color_error;
+      &::placeholder {
+        color: $color_error;
+      }
     }
   }
 }

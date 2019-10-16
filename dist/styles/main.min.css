@@ -9198,14 +9198,64 @@ a.plyr__control::before {
   line-height: 22px;
   color: #78909C;
   font-family: "OpenSans-Regular";
-  padding: 10px 30px;
+  padding: 12px 30px;
+  height: auto;
   border: 2px solid #425B67;
   -webkit-border-radius: 25px;
   border-radius: 25px;
   background: #263238;
+  margin-bottom: 20px;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
+  resize: none;
+}
+
+.footer .get-advertising-form .form-control:focus {
+  background: #fff;
+  border-color: #38AC60;
+  color: #263238;
+}
+
+.footer .get-advertising-form .form-control:focus::-webkit-input-placeholder {
+  color: #263238;
+}
+
+.footer .get-advertising-form .form-control:focus::-moz-placeholder {
+  color: #263238;
+}
+
+.footer .get-advertising-form .form-control:focus::-ms-input-placeholder {
+  color: #263238;
+}
+
+.footer .get-advertising-form .form-control:focus::placeholder {
+  color: #263238;
+}
+
+.footer .get-advertising-form textarea.form-control {
+  height: 190px;
+}
+
+.footer .get-advertising-form .error {
+  border-color: #EB5757;
+  color: #EB5757;
+}
+
+.footer .get-advertising-form .error::-webkit-input-placeholder {
+  color: #EB5757;
+}
+
+.footer .get-advertising-form .error::-moz-placeholder {
+  color: #EB5757;
+}
+
+.footer .get-advertising-form .error::-ms-input-placeholder {
+  color: #EB5757;
+}
+
+.footer .get-advertising-form .error::placeholder {
+  color: #EB5757;
 }
 
 @-webkit-keyframes move_wave {
