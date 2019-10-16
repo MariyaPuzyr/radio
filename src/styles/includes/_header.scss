@@ -27,5 +27,12 @@
   &-logo {
     max-width: 286px;
     height: 65px;
+    width: 100%;
+    display: block;
+    .icon {
+      width: 286px;
+      height: 65px;
+      fill: $color_white;
+    }
   }
 }
