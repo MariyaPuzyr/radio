@@ -7622,6 +7622,78 @@ a.text-dark:focus {
   top: 370px;
 }
 
+.price-table {
+  margin-top: 20px;
+}
+
+.price-table--title {
+  font-size: 28px;
+  line-height: 38px;
+  font-family: "OpenSans-Light";
+  margin-bottom: 25px;
+  color: #263238;
+}
+
+.price-table p {
+  font-size: 18px;
+  line-height: 25px;
+  color: #78909C;
+  margin-bottom: 15px;
+}
+
+.price-table-item {
+  width: 100%;
+  background: #F4F6F2;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.price-table__logo {
+  width: 100px;
+  height: 60px;
+}
+
+.price-table__frequency {
+  font-size: 24px;
+  line-height: 33px;
+  color: #263238;
+  font-family: "OpenSans-Light";
+  width: 115px;
+}
+
+.price-table__price {
+  font-size: 16px;
+  line-height: 22px;
+  color: #78909C;
+  font-family: "OpenSans-Regular";
+}
+
+.price-table__price .price {
+  color: #263238;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.price-table__price .price span {
+  font-size: 14px;
+  line-height: 19px;
+  margin-left: 3px;
+}
+
 h1,
 h2,
 h3,
