@@ -7723,6 +7723,17 @@ a.text-dark:focus {
   -webkit-border-radius: 6px;
   border-radius: 6px;
   padding: 30px 40px 50px;
+  position: relative;
+}
+
+.price-info-item::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 4px;
+  height: 100px;
+  background: #FFA000;
 }
 
 .price-info--title {
@@ -7731,6 +7742,65 @@ a.text-dark:focus {
   line-height: 38px;
   color: #263238;
   margin-bottom: 30px;
+}
+
+.price-info-table--item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  font-family: "OpenSans-Regular";
+  background: #F4F6F2;
+  padding: 10px 20px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #263238;
+}
+
+.price-info-table--item .category {
+  width: 100%;
+  margin-right: 20px;
+}
+
+.price-info-table--item .price {
+  font-size: 24px;
+  line-height: 33px;
+  font-family: "OpenSans-Light";
+  min-width: 152px;
+}
+
+.price-info-table--items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-family: "OpenSans-Regular";
+}
+
+.price-info-table--item:nth-of-type(odd) {
+  background: #fff;
+}
+
+.price-info-table--header {
+  font-size: 18px;
+  line-height: 25px;
+  color: #78909C;
+  margin-bottom: 10px;
+  min-width: 172px;
 }
 
 h1,
@@ -12471,6 +12541,41 @@ body {
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
     margin: 10px 0;
+  }
+
+  .price-info--title {
+    font-size: 20px;
+    line-height: normal;
+  }
+
+  .price-info-item {
+    padding: 15px 25px;
+  }
+
+  .price-info-item::before {
+    top: 20px;
+    height: 125px;
+  }
+
+  .price-info-table--item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .price-info-table--items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  .price-info-table--header {
+    margin-bottom: 0;
   }
 }
 
