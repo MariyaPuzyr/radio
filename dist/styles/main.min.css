@@ -7711,6 +7711,28 @@ a.text-dark:focus {
   color: #263238;
 }
 
+.price-info {
+  background: url("../img/bg-price.jpg") top right;
+  padding: 50px 0 70px;
+}
+
+.price-info-item {
+  background: #fff;
+  -webkit-box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  padding: 30px 40px 50px;
+}
+
+.price-info--title {
+  font-family: "OpenSans-Light";
+  font-size: 28px;
+  line-height: 38px;
+  color: #263238;
+  margin-bottom: 30px;
+}
+
 h1,
 h2,
 h3,

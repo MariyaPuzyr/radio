@@ -1,3 +1,17 @@
 .price-info {
-
+  background: url('../img/bg-price.jpg') top right;
+  padding: 50px 0 70px;
+  &-item {
+    background: $color_white;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    padding: 30px 40px 50px;
+  }
+  &--title {
+    font-family: $font_light;
+    font-size: 28px;
+    line-height: 38px;
+    color: $color_txt;
+    margin-bottom: 30px;
+  }
 }
