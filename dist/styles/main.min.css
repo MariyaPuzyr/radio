@@ -9258,6 +9258,47 @@ a.plyr__control::before {
   color: #EB5757;
 }
 
+.footer .get-advertising-form__btn {
+  width: 100%;
+  border: none;
+  text-align: center;
+  background: #425B67;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 18px;
+  line-height: 25px;
+  font-family: "OpenSans-Regular";
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.footer .get-advertising-form__btn:hover {
+  outline: none;
+  background: #38AC60;
+}
+
+.footer-copy-info {
+  background: #293B44;
+  padding: 20px 0;
+  font-family: "OpenSans-Regular";
+  font-size: 16px;
+  line-height: 22px;
+  color: #78909C;
+}
+
+.footer-copy-info p {
+  margin: 0;
+}
+
+.footer-copy-info .website-development img {
+  margin-left: 10px;
+  width: 159px;
+  height: 30px;
+}
+
 @-webkit-keyframes move_wave {
   0% {
     -webkit-transform: translateX(0) translateZ(0) scaleY(1);

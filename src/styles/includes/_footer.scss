@@ -86,5 +86,38 @@
         color: $color_error;
       }
     }
+    &__btn {
+      width: 100%;
+      border: none;
+      text-align: center;
+      background: $color_bord;
+      border-radius: 25px;
+      color: $color_white;
+      padding: 12px 30px;
+      font-size: 18px;
+      line-height: 25px;
+      font-family: $font_main;
+      transition: .3s;
+      &:hover {
+        outline: none;
+        background: $color_green;
+      }
+    }
+  }
+  &-copy-info {
+    background: $color_footer;
+    padding: 20px 0;
+    font-family: $font_main;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color_txt2;
+    p {
+      margin: 0;
+    }
+    .website-development img {
+      margin-left: 10px;
+      width: 159px;
+      height: 30px;
+    }
   }
 }
