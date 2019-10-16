@@ -9181,105 +9181,6 @@ a.plyr__control::before {
   margin-bottom: 40px;
 }
 
-.footer .get-advertising-form {
-  margin-bottom: 40px;
-}
-
-.footer .get-advertising-form--title {
-  font-family: "OpenSans-Light";
-  font-size: 40px;
-  line-height: 54px;
-  color: #78909C;
-  margin-bottom: 20px;
-}
-
-.footer .get-advertising-form .form-control {
-  font-size: 16px;
-  line-height: 22px;
-  color: #78909C;
-  font-family: "OpenSans-Regular";
-  padding: 12px 30px;
-  height: auto;
-  border: 2px solid #425B67;
-  -webkit-border-radius: 25px;
-  border-radius: 25px;
-  background: #263238;
-  margin-bottom: 20px;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
-  resize: none;
-}
-
-.footer .get-advertising-form .form-control:focus {
-  background: #fff;
-  border-color: #38AC60;
-  color: #263238;
-}
-
-.footer .get-advertising-form .form-control:focus::-webkit-input-placeholder {
-  color: #263238;
-}
-
-.footer .get-advertising-form .form-control:focus::-moz-placeholder {
-  color: #263238;
-}
-
-.footer .get-advertising-form .form-control:focus::-ms-input-placeholder {
-  color: #263238;
-}
-
-.footer .get-advertising-form .form-control:focus::placeholder {
-  color: #263238;
-}
-
-.footer .get-advertising-form textarea.form-control {
-  height: 190px;
-}
-
-.footer .get-advertising-form .error {
-  border-color: #EB5757;
-  color: #EB5757;
-}
-
-.footer .get-advertising-form .error::-webkit-input-placeholder {
-  color: #EB5757;
-}
-
-.footer .get-advertising-form .error::-moz-placeholder {
-  color: #EB5757;
-}
-
-.footer .get-advertising-form .error::-ms-input-placeholder {
-  color: #EB5757;
-}
-
-.footer .get-advertising-form .error::placeholder {
-  color: #EB5757;
-}
-
-.footer .get-advertising-form__btn {
-  width: 100%;
-  border: none;
-  text-align: center;
-  background: #425B67;
-  -webkit-border-radius: 25px;
-  border-radius: 25px;
-  color: #fff;
-  padding: 12px 30px;
-  font-size: 18px;
-  line-height: 25px;
-  font-family: "OpenSans-Regular";
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
-}
-
-.footer .get-advertising-form__btn:hover {
-  outline: none;
-  background: #38AC60;
-}
-
 .footer-copy-info {
   background: #293B44;
   padding: 20px 0;
@@ -9297,6 +9198,105 @@ a.plyr__control::before {
   margin-left: 10px;
   width: 159px;
   height: 30px;
+}
+
+.get-advertising-form {
+  margin-bottom: 40px;
+}
+
+.get-advertising-form--title {
+  font-family: "OpenSans-Light";
+  font-size: 40px;
+  line-height: 54px;
+  color: #78909C;
+  margin-bottom: 20px;
+}
+
+.get-advertising-form .form-control {
+  font-size: 16px;
+  line-height: 22px;
+  color: #78909C;
+  font-family: "OpenSans-Regular";
+  padding: 12px 30px;
+  height: auto;
+  border: 2px solid #425B67;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  background: #263238;
+  margin-bottom: 20px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  resize: none;
+}
+
+.get-advertising-form .form-control:focus {
+  background: #fff;
+  border-color: #38AC60;
+  color: #263238;
+}
+
+.get-advertising-form .form-control:focus::-webkit-input-placeholder {
+  color: #263238;
+}
+
+.get-advertising-form .form-control:focus::-moz-placeholder {
+  color: #263238;
+}
+
+.get-advertising-form .form-control:focus::-ms-input-placeholder {
+  color: #263238;
+}
+
+.get-advertising-form .form-control:focus::placeholder {
+  color: #263238;
+}
+
+.get-advertising-form textarea.form-control {
+  height: 190px;
+}
+
+.get-advertising-form .error {
+  border-color: #EB5757;
+  color: #EB5757;
+}
+
+.get-advertising-form .error::-webkit-input-placeholder {
+  color: #EB5757;
+}
+
+.get-advertising-form .error::-moz-placeholder {
+  color: #EB5757;
+}
+
+.get-advertising-form .error::-ms-input-placeholder {
+  color: #EB5757;
+}
+
+.get-advertising-form .error::placeholder {
+  color: #EB5757;
+}
+
+.get-advertising-form__btn {
+  width: 100%;
+  border: none;
+  text-align: center;
+  background: #425B67;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 18px;
+  line-height: 25px;
+  font-family: "OpenSans-Regular";
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.get-advertising-form__btn:hover {
+  outline: none;
+  background: #38AC60;
 }
 
 @-webkit-keyframes move_wave {
@@ -9781,6 +9781,28 @@ a.plyr__control::before {
 
 .polymin {
   background: #F5F5F5;
+}
+
+.advertising-modal.modal-dialog {
+  max-width: 790px;
+}
+
+.advertising-modal.modal-dialog .modal-content {
+  border: none;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+}
+
+.advertising-modal .modal-body {
+  padding: 20px 30px;
+}
+
+.advertising-modal .get-advertising-form--title {
+  font-size: 28px;
+  line-height: 38px;
+  color: #263238;
 }
 
 h1,
@@ -14544,13 +14566,13 @@ body {
     font-size: 18px;
   }
 
-  .footer .get-advertising-form--title {
-    font-size: 30px;
-    line-height: normal;
-  }
-
   .footer-copy-info p {
     margin-bottom: 10px;
+  }
+
+  .get-advertising-form--title {
+    font-size: 30px;
+    line-height: normal;
   }
 
   .banner-title {
