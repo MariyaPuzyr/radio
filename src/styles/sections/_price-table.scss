@@ -1,5 +1,6 @@
 .price-table {
   margin-top: 20px;
+  margin-bottom: 70px;
   &--title {
     font-size: 28px;
     line-height: 38px;
@@ -26,6 +27,7 @@
   &__logo {
     width: 100px;
     height: 60px;
+    flex: 0 0 auto;
   }
   &__frequency {
     font-size: 24px;
@@ -48,6 +50,37 @@
         line-height: 19px;
         margin-left: 3px;
       }
+    }
+  }
+  ul {
+    padding: 0;
+    margin: 20px 0 0;
+    li {
+      font-size: 16px;
+      line-height: 30px;
+      font-family: $font_main;
+      color: $color_txt;
+    }
+  }
+}
+
+@include adapt_to('large-phone') {
+  .price-table {
+    &--title {
+      font-size: 24px;
+      line-height: normal;
+    }
+    &-item {
+      flex-flow: row wrap;
+      justify-content: flex-start;
+    }
+    &__frequency {
+      width: calc(100% - 100px);
+      padding-left: 30px;
+    }
+    &__price {
+      flex: 1 0 auto;
+      margin: 10px 0;
     }
   }
 }

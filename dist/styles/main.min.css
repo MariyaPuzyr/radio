@@ -7624,6 +7624,7 @@ a.text-dark:focus {
 
 .price-table {
   margin-top: 20px;
+  margin-bottom: 70px;
 }
 
 .price-table--title {
@@ -7665,6 +7666,10 @@ a.text-dark:focus {
 .price-table__logo {
   width: 100px;
   height: 60px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .price-table__frequency {
@@ -7692,6 +7697,18 @@ a.text-dark:focus {
   font-size: 14px;
   line-height: 19px;
   margin-left: 3px;
+}
+
+.price-table ul {
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.price-table ul li {
+  font-size: 16px;
+  line-height: 30px;
+  font-family: "OpenSans-Regular";
+  color: #263238;
 }
 
 h1,
@@ -12396,6 +12413,42 @@ body {
 @media (max-width: 768px) {
   .header-item .info {
     font-size: 18px;
+  }
+
+  .banner-title {
+    font-size: 35px;
+    line-height: normal;
+  }
+
+  .price-table--title {
+    font-size: 24px;
+    line-height: normal;
+  }
+
+  .price-table-item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
+  .price-table__frequency {
+    width: -webkit-calc(100% - 100px);
+    width: calc(100% - 100px);
+    padding-left: 30px;
+  }
+
+  .price-table__price {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    margin: 10px 0;
   }
 }
 

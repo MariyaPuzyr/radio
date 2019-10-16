@@ -77,3 +77,10 @@
     }
   }
 }
+
+@include adapt_to('large-phone') {
+  .banner-title {
+    font-size: 35px;
+    line-height: normal;
+  }
+}
