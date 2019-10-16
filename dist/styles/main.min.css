@@ -14544,6 +14544,15 @@ body {
     font-size: 18px;
   }
 
+  .footer .get-advertising-form--title {
+    font-size: 30px;
+    line-height: normal;
+  }
+
+  .footer-copy-info p {
+    margin-bottom: 10px;
+  }
+
   .banner-title {
     font-size: 35px;
     line-height: normal;

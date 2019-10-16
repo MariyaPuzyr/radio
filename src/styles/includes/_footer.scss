@@ -53,6 +53,10 @@
       line-height: 54px;
       color: $color_txt2;
       margin-bottom: 20px;
+      @include adapt_to('large-phone') {
+        font-size: 30px;
+        line-height: normal;
+      }
     }
     .form-control {
       font-size: 16px;
@@ -113,6 +117,9 @@
     color: $color_txt2;
     p {
       margin: 0;
+      @include adapt_to('large-phone') {
+        margin-bottom: 10px;
+      }
     }
     .website-development img {
       margin-left: 10px;
