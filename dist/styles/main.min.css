@@ -9035,7 +9035,7 @@ a.plyr__control::before {
   line-height: 25px;
   color: #fff;
   font-family: "OpenSans-Bold";
-  padding: 12px 30px;
+  padding: 12px 10px;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
@@ -14611,30 +14611,6 @@ body {
     top: 198px;
     right: 0;
   }
-}
-
-@media (max-width: 768px) {
-  .header-item .info {
-    font-size: 18px;
-  }
-
-  .footer-copy-info p {
-    margin-bottom: 10px;
-  }
-
-  .get-advertising-form--title {
-    font-size: 30px;
-    line-height: normal;
-  }
-
-  .get-advertising-form__btn {
-    font-size: 14px;
-  }
-
-  .banner-title {
-    font-size: 35px;
-    line-height: normal;
-  }
 
   .price-table--title {
     font-size: 24px;
@@ -14665,6 +14641,50 @@ body {
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
     margin: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-item .info {
+    font-size: 18px;
+  }
+
+  .footer-copy-info p {
+    margin-bottom: 10px;
+  }
+
+  .get-advertising-form--title {
+    font-size: 30px;
+    line-height: normal;
+  }
+
+  .get-advertising-form__btn {
+    font-size: 14px;
+  }
+
+  .banner-title {
+    font-size: 35px;
+    line-height: normal;
+  }
+
+  .banner .first-position {
+    width: 190px;
+    height: 190px;
+    left: 45px;
+    top: 130px;
+  }
+
+  .banner .second-position {
+    width: 120px;
+    height: 120px;
+    top: 236px;
+    left: -30px;
+  }
+
+  .banner .third-position {
+    width: 90px;
+    height: 90px;
+    top: 308px;
   }
 
   .price-info--title {

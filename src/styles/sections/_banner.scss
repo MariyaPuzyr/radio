@@ -79,8 +79,27 @@
 }
 
 @include adapt_to('large-phone') {
-  .banner-title {
-    font-size: 35px;
-    line-height: normal;
+  .banner{
+    &-title {
+      font-size: 35px;
+      line-height: normal;
+    }
+    .first-position {
+      width: 190px;
+      height: 190px;
+      left: 45px;
+      top: 130px;
+    }
+    .second-position {
+      width: 120px;
+      height: 120px;
+      top: 236px;
+      left: -30px;
+    }
+    .third-position {
+      width: 90px;
+      height: 90px;
+      top: 308px;
+    }
   }
 }

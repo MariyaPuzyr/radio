@@ -64,7 +64,7 @@
   }
 }
 
-@include adapt_to('large-phone') {
+@include adapt_to('desktop') {
   .price-table {
     &--title {
       font-size: 24px;
