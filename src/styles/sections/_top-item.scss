@@ -3,4 +3,13 @@
   background: url('../img/header-bg.png') top;
   background-repeat-y: no-repeat;
   min-height: 660px;
+  &::after {
+    content: '';
+    background: #fff;
+    width: 100%;
+    position: absolute;
+    height: 20px;
+    z-index: 10;
+    bottom: -10px;
+  }
 }

@@ -20,4 +20,7 @@
     color: $color_btn;
     text-decoration: none;
   }
+  @media (max-width: 767px) {
+    font-size: 15px;
+  }
 }

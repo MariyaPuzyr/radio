@@ -9234,6 +9234,8 @@ a.plyr__control::before {
   background: #fff;
   border-color: #38AC60;
   color: #263238;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .get-advertising-form .form-control:focus::-webkit-input-placeholder {
@@ -9419,6 +9421,16 @@ a.plyr__control::before {
   background: url("../img/header-bg.png") top;
   background-repeat-y: no-repeat;
   min-height: 660px;
+}
+
+.top-item::after {
+  content: '';
+  background: #fff;
+  width: 100%;
+  position: absolute;
+  height: 20px;
+  z-index: 10;
+  bottom: -10px;
 }
 
 .banner {
@@ -9796,13 +9808,53 @@ a.plyr__control::before {
 }
 
 .advertising-modal .modal-body {
-  padding: 20px 30px;
+  padding: 20px 30px 0;
 }
 
 .advertising-modal .get-advertising-form--title {
   font-size: 28px;
   line-height: 38px;
   color: #263238;
+  padding-right: 25px;
+}
+
+.advertising-modal .get-advertising-form .form-control {
+  background: #F4F6F2;
+  border-color: transparent;
+}
+
+.advertising-modal .get-advertising-form .form-control:focus {
+  border-color: #38AC60;
+}
+
+.advertising-modal .get-advertising-form .error {
+  border-color: #EB5757;
+}
+
+.advertising-modal .get-advertising-form__btn {
+  background: #38AC60;
+  font-family: "OpenSans-Bold";
+}
+
+.advertising-modal .get-advertising-form__btn:hover {
+  background: #FFA000;
+}
+
+.advertising-modal .close {
+  opacity: 1;
+  text-shadow: none;
+  position: absolute;
+  top: 25px;
+  right: 30px;
+}
+
+.advertising-modal .close .icon {
+  width: 24px;
+  height: 24px;
+  fill: #C8D0D9;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
 h1,
@@ -14575,6 +14627,10 @@ body {
     line-height: normal;
   }
 
+  .get-advertising-form__btn {
+    font-size: 14px;
+  }
+
   .banner-title {
     font-size: 35px;
     line-height: normal;
@@ -14661,6 +14717,11 @@ body {
     font-size: 18px;
     line-height: normal;
   }
+
+  .advertising-modal .get-advertising-form--title {
+    font-size: 24px;
+    line-height: normal;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -14685,6 +14746,10 @@ body {
 @media (max-width: 767px) {
   .plyr__time + .plyr__time {
     display: none;
+  }
+
+  .get-advertising {
+    font-size: 15px;
   }
 }
 

@@ -96,6 +96,7 @@
       background: $color_white;
       border-color: $color_green;
       color: $color_txt;
+      box-shadow: none;
       &::placeholder {
         color: $color_txt;
       }
@@ -126,6 +127,9 @@
     &:hover {
       outline: none;
       background: $color_green;
+    }
+    @include adapt_to('large-phone') {
+      font-size: 14px;
     }
   }
 }
