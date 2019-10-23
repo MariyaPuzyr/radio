@@ -16,7 +16,7 @@
   right: 0;
   bottom: 0;
   top: 0;
-  z-index: -1;
+  z-index: 1;
 }
 .waveWrapperInner {
   position: absolute;
@@ -24,7 +24,7 @@
   overflow: hidden;
   height: 100%;
   bottom: 0;
-  background: linear-gradient(180deg, #8ED774 0%, #1EA059 100%);
+  //background: linear-gradient(180deg, #8ED774 0%, #1EA059 100%);
 }
 .bgTop {
   z-index: 15;

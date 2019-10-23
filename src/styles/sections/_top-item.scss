@@ -1,19 +1,17 @@
 .top-item {
   position: relative;
-  background: url('../img/header-bg.png') top;
-  background-repeat: repeat-x;
   min-height: 660px;
+  background: linear-gradient(180deg, #8ED774 0%, #1EA059 100%);
   &::after {
     content: '';
-    background: #fff;
+    background: url('../img/header-bg.png') top no-repeat;
     width: 100%;
     position: absolute;
-    height: 20px;
-    z-index: 0;
-    bottom: -10px;
+    height: 100%;
+    top: 0;
   }
   @media (max-width: 576px) {
-    min-height: 600px;
+    min-height: 595px;
     background-size: cover;
   }
 }
