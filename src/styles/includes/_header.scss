@@ -8,9 +8,6 @@
       line-height: 36px;
       font-family: $font_main;
       text-align: right;
-      @include adapt_to('phone') {
-        margin-top: 10px;
-      }
       @include adapt_to('large-phone') {
         font-size: 18px;
       }
@@ -33,6 +30,21 @@
       width: 286px;
       height: 65px;
       fill: $color_white;
+    }
+  }
+}
+@media (max-width: 575px) {
+  .header{
+    &-item {
+      padding-top: 20px;
+      padding-bottom: 5px;
+      .info {
+        margin: 10px auto 0;
+        text-align: center;
+      }
+    }
+    &-logo {
+      margin: auto;
     }
   }
 }

@@ -68,3 +68,12 @@
 .waveBottom {
   background-size: 50% 100px;
 }
+
+@include adapt_to('large-phone') {
+  .waveTop, .waveBottom {
+    background-size: 100% 100px;
+  }
+  .waveMiddle {
+    background-size: 100% 120px;
+  }
+}

@@ -52,6 +52,9 @@
     font-size: 16px;
     line-height: 22px;
     color: $color_txt2;
+    @media (max-width: 575px) {
+      text-align: center;
+    }
     p {
       margin: 0;
       @include adapt_to('large-phone') {

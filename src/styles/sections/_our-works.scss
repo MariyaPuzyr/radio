@@ -8,10 +8,11 @@
   &s {
     margin-top: 50px;
     padding-bottom: 215px;
-    background: url('../img/svg/wave-2.svg') repeat-x bottom;
+    background: url('../img/svg/wave-2.svg') no-repeat bottom;
+    background-size: 100%;
+    background-position-y: calc(100% - 20px);
     @include adapt_to('large-phone') {
       padding-bottom: 50px;
-      background-size: contain;
     }
     &--title {
       font-size: 40px;
