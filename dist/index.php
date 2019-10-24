@@ -441,10 +441,10 @@ $recapch = new ReCaptcha();
 
                             <div class="col-md-12 col-lg-12 mb-4">
                                 <div class="g-recaptcha" data-theme="dark" data-sitekey="<?= $recapch->html ?>"></div>
+                              <div class="error set-message"></div>
                             </div>
 
                             <div class="col-md-12 col-lg-6">
-                                <div class="error set-message"></div>
                                 <button class="get-advertising-form__btn" type="submit">Відправити замовлення</button>
                             </div>
                         </div>
@@ -493,10 +493,10 @@ $recapch = new ReCaptcha();
 
                             <div class="col-md-12 col-lg-12 mb-4">
                                 <div class="g-recaptcha" data-sitekey="<?= $recapch->html ?>"></div>
+                              <div class="error set-message"></div>
                             </div>
 
                             <div class="col-md-12 col-lg-6">
-                                <div class="error set-message"></div>
                                 <button class="get-advertising-form__btn" type="submit">Відправити замовлення</button>
                             </div>
                         </div>
