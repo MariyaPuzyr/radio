@@ -49,29 +49,29 @@ if( isset( $_POST['action'] ) && $_POST['action'] == 'send-form' ) {
 
         if(!$response->success){
 
-            $out['message'] = 'Вы робот?';
+            $out['message'] = 'Ви робот?';
         }
         else{
 
             $to  = 'fmvsumah@gmail.com';
-            $subject = "Заказ рекламы";
+            $subject = "Замовлення реклами";
 
             $message = '
-Заказ рекламы от'.date('d.m.Y H:i').'
+замовлення реклами від'.date('d.m.Y H:i').'
 Телефон: '.$data['phone'].'
-Почта: '.$data['email'].'
-Компания: '.$data['compani'].'
-Сообщение: '.$data['message'].'
+Пошта: '.$data['email'].'
+Компанія: '.$data['compani'].'
+Повідомлення: '.$data['message'].'
 ';
 
             if(mail($to, $subject, $message)){
 
                 $out['ok'] = true;
-                $out['message'] = 'Ваше сообщение отправлено, скоро с вами свяжется менеджер';
+                $out['message'] = 'Ваше повідомлення надіслано, скоро з вами зв\'яжеться менеджер';
             }
             else{
 
-                $out['message'] = 'Что-то пошло не так, обратитесь к администратору';
+                $out['message'] = 'Щось пішло не так, зверніться до адміністратора';
             }
         }
     }
