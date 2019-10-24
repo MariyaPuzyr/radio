@@ -1,3 +1,9 @@
+<?php
+
+include_once 'lib/ReCaptcha.php';
+$recapch = new ReCaptcha();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -419,17 +425,24 @@
           <div class="col-md-6 col-lg-8">
             <div class="get-advertising-form">
               <div class="get-advertising-form--title">Замовити рекламу на радіо:</div>
-              <form action="#">
+              <form action="/" method="post" name="form-modal">
                 <div class="row">
                   <div class="col-md-12 col-lg-6">
-                    <input class="form-control" type="text" placeholder="Телефон">
-                    <input class="form-control" type="email" placeholder="E-mail">
-                    <input class="form-control" type="email" placeholder="Ім'я або назва компанії">
+                    <input class="form-control" name="phone" value="<?= isset($_POST['phone'])? $_POST['phone'] : ''  ?>"
+                           type="text" placeholder="Телефон" required>
+                    <input class="form-control" name="email" value="<?= isset($_POST['email'])? $_POST['email'] : ''  ?>"
+                           type="email" placeholder="E-mail" required>
+                    <input class="form-control" name="compani" value="<?= isset($_POST['compani'])? $_POST['compani'] : ''  ?>"
+                           type="text" placeholder="Ім'я або назва компанії" required>
                   </div>
                   <div class="col-md-12 col-lg-6">
-                    <textarea class="form-control" placeholder="Ваше замовлення" rows="5"></textarea>
+                    <textarea class="form-control" name="message" placeholder="Ваше замовлення" rows="5" required><?= isset($_POST['message'])? $_POST['message'] : ''  ?></textarea>
                   </div>
+
+                    <div class="g-recaptcha" data-theme="dark" data-sitekey="<?= $recapch->html ?>"></div>
+
                   <div class="col-md-12 col-lg-6">
+                      <div class="error set-message"></div>
                     <button class="get-advertising-form__btn" type="submit">Відправити замовлення</button>
                   </div>
                 </div>
@@ -460,23 +473,30 @@
                 <use xlink:href="./img/sprites/sprite.svg#close-icon"></use>
               </svg>
             </button>
-            <div class="get-advertising-form">
-              <div class="get-advertising-form--title">Замовити рекламу на радіо:</div>
-              <form action="#">
-                <div class="row">
-                  <div class="col-md-12 col-lg-6">
-                    <input class="form-control" type="text" placeholder="Телефон">
-                    <input class="form-control" type="email" placeholder="E-mail">
-                    <input class="form-control" type="email" placeholder="Ім'я або назва компанії">
-                  </div>
-                  <div class="col-md-12 col-lg-6">
-                    <textarea class="form-control" placeholder="Ваше замовлення" rows="5"></textarea>
-                  </div>
-                  <div class="col-md-12 col-lg-6">
-                    <button class="get-advertising-form__btn" type="submit">Відправити замовлення</button>
-                  </div>
-                </div>
-              </form>
+              <div class="get-advertising-form">
+                  <div class="get-advertising-form--title">Замовити рекламу на радіо:</div>
+                  <form action="/" method="post" name="form-footer">
+                      <div class="row">
+                          <div class="col-md-12 col-lg-6">
+                              <input class="form-control" name="phone" value="<?= isset($_POST['phone'])? $_POST['phone'] : ''  ?>"
+                                     type="text" placeholder="Телефон" required>
+                              <input class="form-control" name="email" value="<?= isset($_POST['email'])? $_POST['email'] : ''  ?>"
+                                     type="email" placeholder="E-mail" required>
+                              <input class="form-control" name="compani" value="<?= isset($_POST['compani'])? $_POST['compani'] : ''  ?>"
+                                     type="text" placeholder="Ім'я або назва компанії" required>
+                          </div>
+                          <div class="col-md-12 col-lg-6">
+                              <textarea class="form-control" name="message" placeholder="Ваше замовлення" rows="5" required><?= isset($_POST['message'])? $_POST['message'] : ''  ?></textarea>
+                          </div>
+
+                          <div class="g-recaptcha" data-sitekey="<?= $recapch->html ?>"></div>
+
+                          <div class="col-md-12 col-lg-6">
+                              <div class="error set-message"></div>
+                              <button class="get-advertising-form__btn" type="submit">Відправити замовлення</button>
+                          </div>
+                      </div>
+                  </form>
             </div>
           </div>
         </div>
@@ -484,5 +504,34 @@
     </div>
     <script src="./js/main-libs.min.js"></script>
     <script>const players = Plyr.setup('.player');</script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <script>
+        jQuery(document).ready(function($) {
+            $('[name="form-modal"], [name="form-footer"]').submit(function (e) {
+                e.preventDefault();
+                var form = $(this).serialize();
+                $.ajax({
+                    url: '/ajax.php',
+                    type: "post",
+                    data: {
+                        form: form,
+                        action: 'send-form'
+                    },
+                    beforeSend: function (data) {},
+                    success: function(data){
+                        if(data.ok == false){
+                            $('.set-message').html(data.message);
+                        }
+                        else {
+                            $('[name="form-modal"], [name="form-footer"]').html(data.message);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+
   </body>
 </html>
