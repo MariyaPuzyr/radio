@@ -12,6 +12,8 @@
   }
   @media (max-width: 576px) {
     min-height: 595px;
-    background-size: cover;
+    &::after {
+      display: none;
+    }
   }
 }
