@@ -23,6 +23,7 @@ if( ISAJAXREQUEST ) {
 }
 
 include_once 'lib/ReCaptcha.php';
+include_once 'lib/mailer/class.phpmailer.php';
 
 
 $JSON = array();
@@ -53,18 +54,44 @@ if( isset( $_POST['action'] ) && $_POST['action'] == 'send-form' ) {
         }
         else{
 
-            $to  = 'fmvsumah@gmail.com';
-            $subject = "Замовлення реклами";
+
 
             $message = '
-замовлення реклами від'.date('d.m.Y H:i').'
-Телефон: '.$data['phone'].'
-Пошта: '.$data['email'].'
-Компанія: '.$data['compani'].'
-Повідомлення: '.$data['message'].'
+<p>замовлення реклами від '.date('d.m.Y H:i').'</p>
+<p>Телефон: '.$data['phone'].'</p>
+<p>Пошта: '.$data['email'].'</p>
+<p>Компанія: '.$data['compani'].'</p>
+<p>Повідомлення: '.$data['message'].'</p>
 ';
 
-            if(mail($to, $subject, $message)){
+            $to  = 'fmvsumah@gmail.com';
+            $subject = "Замовлення реклами";
+            $from  = 'robot@gorod.sumy.ua';
+
+
+            $mailer=new PHPMailer;
+            $mailer->ClearAddresses();
+            $mailer->ClearAttachments();
+            $mailer->Host = 'mail.gorod.sumy.ua';
+            $mailer->SMTPAuth = true;
+            $mailer->Username = 'robot@gorod.sumy.ua';
+            $mailer->Password = 'g2cLFLvp';
+            $mailer->Subject=$subject;
+            $mailer->Body=$message;
+            $mailer->From=$from;
+            $mailer->FromName=$from;
+            $mailer->AddAddress($to);
+            $mailer->isHtml(true);
+            $mailer->CharSet = "utf-8";
+
+//            $headers = "From: " . $from  . "\r\n";
+//            $headers .= "Reply-To: ". $from . "\r\n";
+//            $headers .= "CC: ". $from ."\r\n";
+//            $headers .= "MIME-Version: 1.0\r\n";
+//            $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+//
+//            if(mail($to, $subject, $message, $headers)){
+            if($mailer->send()){
 
                 $out['ok'] = true;
                 $out['message'] = 'Ваше повідомлення надіслано, скоро з вами зв\'яжеться менеджер';

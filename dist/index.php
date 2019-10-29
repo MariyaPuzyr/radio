@@ -524,6 +524,7 @@ $recapch = new ReCaptcha();
                 },
                 beforeSend: function (data) {},
                 success: function(data){
+                    console.log(data);
                     if(data.ok == false){
                         $('.set-message').show();
                         $('.set-message').html(data.message);
